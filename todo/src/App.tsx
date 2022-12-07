@@ -1,23 +1,30 @@
 import React, { useState } from "react";
 import "./App.css";
+import Tasklist from "./Components/Tasklist";
 
 function App() {
-  const [task, setTask] = useState<string>("");
-  const [deadline, setDeadline] = useState<number>(0);
-  const [list, setList] = useState<string>("");
+  // const [task, setTask] = useState<string>("");
+  // const [deadline, setDeadline] = useState<number>(0);
+  // const [list, setList] = useState<ITask[]>([]);
 
-  const handleChange = () => {};
+  // const handleChange = (event: any) => {
+  //   if (event.target.name === "Task") {
+  //     setTask(event.target.value);
+  //   } else {
+  //     setTask(event.target.value);
+  //   }
+  // };
+  // const addTask = (): void => {
+  //   console.log("hello");
+  //   const newTask = { TaskName: task, TimeLine: deadline };
+  //   setList([...list, newTask]);
+  //   setTask("");
+  //   setDeadline(0);
+  // };
 
   return (
     <div className="App">
-      <div className="header">
-        <div className="inputContent">
-          <input type="text" placeholder="Task" onChange={handleChange} />
-          <input type="number" placeholder="Deadline in Days....." />
-        </div>
-        <button className="button">Add Task</button>
-      </div>
-      <div className="todolist"></div>
+      <Tasklist />
     </div>
   );
 }
